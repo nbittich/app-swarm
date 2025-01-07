@@ -1,0 +1,123 @@
+services:
+  virtuoso:
+    image: redpencil/virtuoso:1.2.0
+    environment:
+      SPARQL_UPDATE: "true"
+      DEFAULT_GRAPH: "http://mu.semte.ch/graphs/public"
+    volumes:
+      - ./data/db:/data
+      - ./config/virtuoso/virtuoso.ini:/data/virtuoso.ini
+      - ./config/virtuoso/:/opt/virtuoso-scripts
+    restart: always
+    networks:
+      swarm:
+  nats:
+    image: nats:2.10-alpine
+    restart: always
+    networks:
+      swarm:
+    container_name: nats-server
+    command: -js -sd /nats-data -c /nats-config/nats.conf
+    volumes:
+      - ./data/nats/data:/nats-data
+      - ./config/nats/nats-server.conf:/nats-config/nats.conf
+  mongo:
+    image: mongo
+    networks:
+      swarm:
+    restart: always
+    volumes:
+      - ./data/db:/data/db
+  migrations:
+    image: nbittich/mongodb-migration:v0.3.0
+    restart: "no"
+    volumes:
+      - ./config/migrations:/migrations/all
+    networks:
+      swarm:
+  # app services
+  crawler:
+    image: nbittich/crawler
+    restart: always
+    volumes:
+      - ./data/shared:/share
+      - ./data/crawler/cache:/cache
+    networks:
+      swarm:
+  extractor:
+    image: nbittich/extractor
+    restart: always
+    volumes:
+      - ./data/shared:/share
+    networks:
+      swarm:
+  job-manager:
+    image: nbittich/job-manager
+    restart: always
+    volumes:
+      - ./data/shared:/share
+      - ./config/job-manager/definitions.json:/definitions.json
+    networks:
+      swarm:
+  filter:
+    image: nbittich/filter
+    restart: always
+    volumes:
+      - ./data/shared:/share
+      - ./config/shacl:/config
+    networks:
+      swarm:
+  add-uuid:
+    image: nbittich/add-uuid
+    restart: always
+    volumes:
+      - ./data/shared:/share
+    networks:
+      swarm:
+  diff:
+    image: nbittich/diff
+    restart: always
+    volumes:
+      - ./data/shared:/share
+    networks:
+      swarm:
+  publish:
+    image: nbittich/publish
+    restart: always
+    volumes:
+      - ./data/shared:/share
+    networks:
+      swarm:
+  cleanup:
+    image: nbittich/cleanup
+    restart: always
+    volumes:
+      - ./data/shared:/share
+    networks:
+      swarm:
+  archive:
+    image: nbittich/archive
+    restart: always
+    volumes:
+      - ./data/shared:/share
+    networks:
+      swarm:
+  frontend:
+    image: nbittich/swarm-frontend
+    restart: always
+    networks:
+      swarm:
+  proxy:
+    image: nginx:1.27-alpine
+    networks:
+      swarm:
+    volumes:
+      - ./config/proxy/http:/etc/nginx/conf.d
+      - ./config/proxy/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./config/proxy/templates:/etc/nginx/templates:ro
+    depends_on:
+      - job-manager
+      - frontend
+    restart: always
+networks:
+  swarm:

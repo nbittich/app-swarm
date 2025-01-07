@@ -1,0 +1,49 @@
+services:
+  job-manager:
+    build:
+      context: ../
+      args:
+        CRATE_NAME: job-manager
+  crawler:
+    build:
+      context: ../
+      args:
+        CRATE_NAME: crawler
+  extractor:
+    build:
+      context: ../
+      args:
+        CRATE_NAME: extractor
+  filter:
+    build:
+      context: ../filter/
+      args:
+        CRATE_NAME: filter
+  add-uuid:
+    build:
+      context: ../
+      args:
+        CRATE_NAME: add-uuid
+  diff:
+    build:
+      context: ../
+      args:
+        CRATE_NAME: diff
+  publish:
+    build:
+      context: ../
+      args:
+        CRATE_NAME: publish
+  cleanup:
+    build:
+      context: ../
+      args:
+        CRATE_NAME: cleanup
+  archive:
+    build:
+      context: ../
+      args:
+        CRATE_NAME: archive
+  frontend:
+    build:
+      context: ../frontend/

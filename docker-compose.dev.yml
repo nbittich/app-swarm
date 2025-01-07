@@ -1,0 +1,85 @@
+services:
+  # virtuoso:
+  #   ports:
+  #     - "8890:8890"
+  nats:
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+    volumes:
+      - ./config/nats/nats-server-dev.conf:/nats-config/nats.conf
+  mongo-express:
+    image: mongo-express
+    networks:
+      swarm:
+    restart: "no"
+    env_file:
+      - ./config/env-files/dev/express.env
+    ports:
+      - "8081:8081"
+  mongo:
+    ports:
+      - "27017:27017"
+    env_file:
+      - ./config/env-files/dev/mongo.env
+  migrations:
+    volumes:
+      - ./config/dev-migrations:/migrations/dev
+    env_file:
+      - ./config/env-files/dev/mongo_cli.env
+  job-manager:
+    # ports:
+    #   - "8080:80"
+    env_file:
+      - ./config/env-files/dev/nats.env
+      - ./config/env-files/dev/mongo_cli.env
+      - ./config/env-files/dev/sparql_cli.env
+      - ./config/env-files/dev/api.env
+      - ./config/env-files/dev/download.env
+      - ./config/env-files/dev/job-manager.env
+  crawler:
+    env_file:
+      - ./config/env-files/dev/nats.env
+      - ./config/env-files/dev/crawler.env
+      # - ./config/env-files/dev/mongo_cli.env
+  extractor:
+    env_file:
+      - ./config/env-files/dev/nats.env
+      - ./config/env-files/dev/extractor.env
+  filter:
+    env_file:
+      - ./config/env-files/dev/nats.env
+      - ./config/env-files/dev/filter.env
+  add-uuid:
+    env_file:
+      - ./config/env-files/dev/nats.env
+      - ./config/env-files/dev/mongo_cli.env
+      - ./config/env-files/dev/add-uuid.env
+  diff:
+    env_file:
+      - ./config/env-files/dev/nats.env
+      - ./config/env-files/dev/mongo_cli.env
+      - ./config/env-files/dev/diff.env
+  publish:
+    env_file:
+      - ./config/env-files/dev/nats.env
+      - ./config/env-files/dev/sparql_cli.env
+      - ./config/env-files/dev/publish.env
+  cleanup:
+    env_file:
+      - ./config/env-files/dev/nats.env
+      - ./config/env-files/dev/mongo_cli.env
+      - ./config/env-files/dev/cleanup.env
+  archive:
+    env_file:
+      - ./config/env-files/dev/nats.env
+      - ./config/env-files/dev/mongo_cli.env
+      - ./config/env-files/dev/archive.env
+  frontend:
+    env_file:
+      - ./config/env-files/dev/frontend.env
+  proxy:
+    env_file:
+      - ./config/env-files/dev/download.env
+    ports:
+      - "8080:80"

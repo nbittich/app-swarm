@@ -1,0 +1,131 @@
+[
+  {
+    "id": "019422ef4fd57db2a30207486a1eba55",
+    "name": "Cleanup",
+    "allowConcurrentRun": false,
+    "tasks": [
+      {
+        "name": "cleanup",
+        "order": 0,
+        "payload": {
+          "type": "cleanup",
+          "value": {
+            "type": "archived"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "0193e822c0377b8187a6d151dbbb4216",
+    "name": "Harvest",
+    "allowConcurrentRun": false,
+    "tasks": [
+      {
+        "name": "collect",
+        "order": 0,
+        "payload": {
+          "type": "scrapeUrl",
+          "value": ""
+        }
+      },
+      {
+        "name": "extract",
+        "order": 1,
+        "payload": {
+          "type": "fromPreviousStep",
+          "value": {
+            "taskId": "",
+            "payload": {
+              "type": "scrapeWebsite",
+              "value": {
+                "successCount": 0,
+                "failureCount": 0,
+                "manifestFilePath": ""
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "filter",
+        "order": 2,
+        "payload": {
+          "type": "fromPreviousStep",
+          "value": {
+            "taskId": "",
+            "payload": {
+              "type": "extractRDFa",
+              "value": {
+                "successCount": 0,
+                "failureCount": 0,
+                "manifestFilePath": ""
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "add-uuid",
+        "order": 3,
+        "payload": {
+          "type": "fromPreviousStep",
+          "value": {
+            "taskId": "",
+            "payload": {
+              "type": "filterSHACL",
+              "value": {
+                "successCount": 0,
+                "failureCount": 0,
+                "manifestFilePath": ""
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "diff",
+        "order": 4,
+        "payload": {
+          "type": "fromPreviousStep",
+          "value": {
+            "taskId": "",
+            "payload": {
+              "type": "complementWithUuid",
+              "value": {
+                "successCount": 0,
+                "failureCount": 0,
+                "manifestFilePath": ""
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "publish",
+        "order": 5,
+        "payload": {
+          "type": "fromPreviousStep",
+          "value": {
+            "taskId": "",
+            "payload": {
+              "type": "diff",
+              "value": {
+                "successCount": 0,
+                "failureCount": 0,
+                "manifestFilePath": ""
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "archive",
+        "order": 6,
+        "payload": {
+          "type": "archive"
+        }
+      }
+    ]
+  }
+]
