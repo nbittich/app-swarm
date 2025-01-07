@@ -22,7 +22,7 @@ services:
       - ./data/nats/data:/nats-data
       - ./config/nats/nats-server.conf:/nats-config/nats.conf
   mongo:
-    image: mongo
+    image: mongo:7
     networks:
       swarm:
     restart: always
@@ -37,7 +37,7 @@ services:
       swarm:
   # app services
   crawler:
-    image: nbittich/crawler
+    image: nbittich/crawler:0.1.0
     restart: always
     volumes:
       - ./data/shared:/share
@@ -45,14 +45,14 @@ services:
     networks:
       swarm:
   extractor:
-    image: nbittich/extractor
+    image: nbittich/extractor:0.1.0
     restart: always
     volumes:
       - ./data/shared:/share
     networks:
       swarm:
   job-manager:
-    image: nbittich/job-manager
+    image: nbittich/job-manager:0.1.0
     restart: always
     volumes:
       - ./data/shared:/share
@@ -60,7 +60,7 @@ services:
     networks:
       swarm:
   filter:
-    image: nbittich/filter
+    image: nbittich/filter:0.1.0
     restart: always
     volumes:
       - ./data/shared:/share
@@ -68,56 +68,45 @@ services:
     networks:
       swarm:
   add-uuid:
-    image: nbittich/add-uuid
+    image: nbittich/add-uuid:0.1.0
     restart: always
     volumes:
       - ./data/shared:/share
     networks:
       swarm:
   diff:
-    image: nbittich/diff
+    image: nbittich/diff:0.1.0
     restart: always
     volumes:
       - ./data/shared:/share
     networks:
       swarm:
   publish:
-    image: nbittich/publish
+    image: nbittich/publish:0.1.0
     restart: always
     volumes:
       - ./data/shared:/share
     networks:
       swarm:
   cleanup:
-    image: nbittich/cleanup
+    image: nbittich/cleanup:0.1.0
     restart: always
     volumes:
       - ./data/shared:/share
     networks:
       swarm:
   archive:
-    image: nbittich/archive
+    image: nbittich/archive:0.1.0
     restart: always
     volumes:
       - ./data/shared:/share
     networks:
       swarm:
   frontend:
-    image: nbittich/swarm-frontend
+    image: nbittich/swarm-frontend:0.1.0
     restart: always
     networks:
       swarm:
-  proxy:
-    image: nginx:1.27-alpine
-    networks:
-      swarm:
-    volumes:
-      - ./config/proxy/http:/etc/nginx/conf.d
-      - ./config/proxy/nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./config/proxy/templates:/etc/nginx/templates:ro
-    depends_on:
-      - job-manager
-      - frontend
-    restart: always
+
 networks:
   swarm:

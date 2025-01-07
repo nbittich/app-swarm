@@ -79,7 +79,18 @@ services:
     env_file:
       - ./config/env-files/dev/frontend.env
   proxy:
+    image: nginx:1.27-alpine
+    networks:
+      swarm:
+    volumes:
+      - ./config/proxy/http:/etc/nginx/conf.d
+      - ./config/proxy/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./config/proxy/templates:/etc/nginx/templates:ro
     env_file:
       - ./config/env-files/dev/download.env
     ports:
       - "8080:80"
+    depends_on:
+      - job-manager
+      - frontend
+    restart: always
