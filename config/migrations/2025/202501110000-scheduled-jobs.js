@@ -1600,7 +1600,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "https://meerhout.meetingburger.net/?AlleVergaderingen=False/"
+                "value": "https://meerhout.meetingburger.net/?AlleVergaderingen=True/"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -1630,7 +1630,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "http://Maldegem.meetingburger.net/?AlleVergaderingen=False"
+                "value": "http://Maldegem.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -1645,7 +1645,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "http://Mol.meetingburger.net/?AlleVergaderingen=False"
+                "value": "http://Mol.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -1660,7 +1660,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "https://olen.meetingburger.net/?AlleVergaderingen=False/"
+                "value": "https://olen.meetingburger.net/?AlleVergaderingen=True/"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -1675,7 +1675,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "https://hoeilaart.meetingburger.net/?AlleVergaderingen=False/"
+                "value": "https://hoeilaart.meetingburger.net/?AlleVergaderingen=True/"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -1690,7 +1690,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "https://hoeselt.meetingburger.net/?AlleVergaderingen=False/"
+                "value": "https://hoeselt.meetingburger.net/?AlleVergaderingen=True/"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -1705,7 +1705,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "https://heusden-zolder.meetingburger.net/?AlleVergaderingen=False/"
+                "value": "https://heusden-zolder.meetingburger.net/?AlleVergaderingen=True/"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -1720,7 +1720,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "http://Drogenbos.meetingburger.net/?AlleVergaderingen=False"
+                "value": "http://Drogenbos.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -1750,7 +1750,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "http://Wommelgem.meetingburger.net/?AlleVergaderingen=False"
+                "value": "http://Wommelgem.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -1765,7 +1765,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "http://Alken.meetingburger.net/?AlleVergaderingen=False"
+                "value": "http://Alken.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -1780,7 +1780,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "https://herselt.meetingburger.net/?AlleVergaderingen=False/"
+                "value": "https://herselt.meetingburger.net/?AlleVergaderingen=True/"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -1795,7 +1795,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "http://Holsbeek.meetingburger.net/?AlleVergaderingen=False"
+                "value": "http://Holsbeek.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -1810,7 +1810,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "http://Kasterlee.meetingburger.net/?AlleVergaderingen=False"
+                "value": "http://Kasterlee.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -1840,7 +1840,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "http://Schoten.meetingburger.net/?AlleVergaderingen=False"
+                "value": "http://Schoten.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -1855,7 +1855,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "http://Deerlijk.meetingburger.net/?AlleVergaderingen=False"
+                "value": "http://Deerlijk.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -1885,7 +1885,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "https://keerbergen.meetingburger.net/?AlleVergaderingen=False/"
+                "value": "https://keerbergen.meetingburger.net/?AlleVergaderingen=True/"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -1900,7 +1900,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "https://bertem.meetingburger.net/?AlleVergaderingen=False"
+                "value": "https://bertem.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -1915,7 +1915,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "https://boutersem.meetingburger.net/?AlleVergaderingen=False/"
+                "value": "https://boutersem.meetingburger.net/?AlleVergaderingen=True/"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -1930,7 +1930,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "https://hove.meetingburger.net/?AlleVergaderingen=False/"
+                "value": "https://hove.meetingburger.net/?AlleVergaderingen=True/"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -1960,7 +1960,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "http://Meise.meetingburger.net/?AlleVergaderingen=False"
+                "value": "http://Meise.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -1975,7 +1975,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "http://Brasschaat.meetingburger.net/?AlleVergaderingen=False"
+                "value": "http://Brasschaat.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -1990,7 +1990,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "http://Hoogstraten.meetingburger.net/?AlleVergaderingen=False"
+                "value": "http://Hoogstraten.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -2005,7 +2005,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "https://wemmel.meetingburger.net/?AlleVergaderingen=False/"
+                "value": "https://wemmel.meetingburger.net/?AlleVergaderingen=True/"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -2020,7 +2020,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "https://tielt-winge.meetingburger.net/?AlleVergaderingen=False"
+                "value": "https://tielt-winge.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -2035,7 +2035,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "https://kapellen.meetingburger.net/?AlleVergaderingen=False/"
+                "value": "https://kapellen.meetingburger.net/?AlleVergaderingen=True/"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -2050,7 +2050,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "http://Hemiksem.meetingburger.net/?AlleVergaderingen=False"
+                "value": "http://Hemiksem.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -2065,7 +2065,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "http://roosdaal.meetingburger.net/?AlleVergaderingen=False"
+                "value": "http://roosdaal.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -2080,7 +2080,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "http://Riemst.meetingburger.net/?AlleVergaderingen=False"
+                "value": "http://Riemst.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -2095,7 +2095,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "http://Bekkevoort.meetingburger.net/?AlleVergaderingen=False"
+                "value": "http://Bekkevoort.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -2110,7 +2110,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "https://wezembeek-oppem.meetingburger.net/?AlleVergaderingen=False/"
+                "value": "https://wezembeek-oppem.meetingburger.net/?AlleVergaderingen=True/"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -2125,7 +2125,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "http://Ranst.meetingburger.net/?AlleVergaderingen=False"
+                "value": "http://Ranst.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -2140,7 +2140,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "https://schelle.meetingburger.net/?AlleVergaderingen=False/"
+                "value": "https://schelle.meetingburger.net/?AlleVergaderingen=True/"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -2155,7 +2155,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "http://Lier.meetingburger.net/?AlleVergaderingen=False"
+                "value": "http://Lier.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -2170,7 +2170,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "http://Tremelo.meetingburger.net/?AlleVergaderingen=False"
+                "value": "http://Tremelo.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -2185,7 +2185,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "https://kraainem.meetingburger.net/?AlleVergaderingen=False/"
+                "value": "https://kraainem.meetingburger.net/?AlleVergaderingen=True/"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -2200,7 +2200,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "http://Wellen.meetingburger.net/?AlleVergaderingen=False"
+                "value": "http://Wellen.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -2215,7 +2215,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "http://Asse.meetingburger.net/?AlleVergaderingen=False"
+                "value": "http://Asse.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -2230,7 +2230,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "http://Hulshout.meetingburger.net/?AlleVergaderingen=False"
+                "value": "http://Hulshout.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -2245,7 +2245,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "https://boortmeerbeek.meetingburger.net/?AlleVergaderingen=False/"
+                "value": "https://boortmeerbeek.meetingburger.net/?AlleVergaderingen=True/"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -2260,7 +2260,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "http://Begijnendijk.meetingburger.net/?AlleVergaderingen=False"
+                "value": "http://Begijnendijk.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -2275,7 +2275,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "http://Boechout.meetingburger.net/?AlleVergaderingen=False"
+                "value": "http://Boechout.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -2290,7 +2290,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "http://Schilde.meetingburger.net/?AlleVergaderingen=False"
+                "value": "http://Schilde.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -2305,7 +2305,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "http://Rotselaar.meetingburger.net/?AlleVergaderingen=False"
+                "value": "http://Rotselaar.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -2320,7 +2320,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "http://Houthalen-Helchteren.meetingburger.net/?AlleVergaderingen=False"
+                "value": "http://Houthalen-Helchteren.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -2335,7 +2335,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "http://Beersel.meetingburger.net/?AlleVergaderingen=False"
+                "value": "http://Beersel.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
@@ -2350,7 +2350,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "http://Malle.meetingburger.net/?AlleVergaderingen=False"
+                "value": "http://Malle.meetingburger.net/?AlleVergaderingen=True"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
