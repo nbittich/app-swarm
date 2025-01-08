@@ -37,7 +37,7 @@ services:
       swarm:
   # app services
   crawler:
-    image: nbittich/crawler:0.1.0
+    image: nbittich/crawler:0.1.2
     restart: always
     volumes:
       - ./data/shared:/share
@@ -45,14 +45,14 @@ services:
     networks:
       swarm:
   extractor:
-    image: nbittich/extractor:0.1.0
+    image: nbittich/extractor:0.1.2
     restart: always
     volumes:
       - ./data/shared:/share
     networks:
       swarm:
   job-manager:
-    image: nbittich/job-manager:0.1.0
+    image: nbittich/job-manager:0.1.2
     restart: always
     volumes:
       - ./data/shared:/share
@@ -60,7 +60,7 @@ services:
     networks:
       swarm:
   filter:
-    image: nbittich/filter:0.1.0
+    image: nbittich/filter:0.1.2
     restart: always
     volumes:
       - ./data/shared:/share
@@ -68,42 +68,42 @@ services:
     networks:
       swarm:
   add-uuid:
-    image: nbittich/add-uuid:0.1.0
+    image: nbittich/add-uuid:0.1.2
     restart: always
     volumes:
       - ./data/shared:/share
     networks:
       swarm:
   diff:
-    image: nbittich/diff:0.1.0
+    image: nbittich/diff:0.1.2
     restart: always
     volumes:
       - ./data/shared:/share
     networks:
       swarm:
   publish:
-    image: nbittich/publish:0.1.0
+    image: nbittich/publish:0.1.2
     restart: always
     volumes:
       - ./data/shared:/share
     networks:
       swarm:
   cleanup:
-    image: nbittich/cleanup:0.1.0
+    image: nbittich/cleanup:0.1.2
     restart: always
     volumes:
       - ./data/shared:/share
     networks:
       swarm:
   archive:
-    image: nbittich/archive:0.1.0
+    image: nbittich/archive:0.1.2
     restart: always
     volumes:
       - ./data/shared:/share
     networks:
       swarm:
   frontend:
-    image: nbittich/swarm-frontend:0.1.0
+    image: nbittich/swarm-frontend:0.1.2
     restart: always
     networks:
       swarm:
