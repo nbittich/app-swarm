@@ -1,3 +1,4 @@
 /data/
 .env
 /config/env-files/prod/
+/config/nats/nats-server-prod.conf
