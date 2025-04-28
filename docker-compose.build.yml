@@ -1,49 +1,49 @@
 services:
   job-manager:
     build:
-      context: ../
+      context: ../swarm
       args:
         CRATE_NAME: job-manager
   crawler:
     build:
-      context: ../
+      context: ../swarm
       args:
         CRATE_NAME: crawler
   extractor:
     build:
-      context: ../
+      context: ../swarm
       args:
         CRATE_NAME: extractor
   filter:
     build:
-      context: ../filter/
+      context: ../swarm/filter/
       args:
         CRATE_NAME: filter
   add-uuid:
     build:
-      context: ../
+      context: ../swarm
       args:
         CRATE_NAME: add-uuid
   diff:
     build:
-      context: ../
+      context: ../swarm
       args:
         CRATE_NAME: diff
   publish:
     build:
-      context: ../
+      context: ../swarm
       args:
         CRATE_NAME: publish
   cleanup:
     build:
-      context: ../
+      context: ../swarm
       args:
         CRATE_NAME: cleanup
   archive:
     build:
-      context: ../
+      context: ../swarm
       args:
         CRATE_NAME: archive
   frontend:
     build:
-      context: ../frontend/
+      context: ../swarm/frontend/

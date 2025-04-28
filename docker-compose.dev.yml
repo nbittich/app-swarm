@@ -79,7 +79,7 @@ services:
     env_file:
       - ./config/env-files/dev/frontend.env
   proxy:
-    image: nginx:1.27-alpine
+    image: nginx:1.28-alpine
     networks:
       swarm:
     volumes:

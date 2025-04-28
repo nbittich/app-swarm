@@ -1,9 +1,9 @@
 services:
   virtuoso:
-    image: redpencil/virtuoso:1.2.0
+    image: redpencil/virtuoso:1.2.1
     environment:
       SPARQL_UPDATE: "true"
-      DEFAULT_GRAPH: "http://mu.semte.ch/graphs/public"
+      DEFAULT_GRAPH: "http://swarm.bittich.be/graphs/public"
     volumes:
       - ./data/db:/data
       - ./config/virtuoso/virtuoso.ini:/data/virtuoso.ini
@@ -12,7 +12,7 @@ services:
     networks:
       swarm:
   nats:
-    image: nats:2.10-alpine
+    image: nats:2.11-alpine
     restart: always
     networks:
       swarm:
