@@ -44,6 +44,11 @@ services:
       context: ../swarm
       args:
         CRATE_NAME: archive
+  index:
+    build:
+      context: ../swarm
+      args:
+        CRATE_NAME: index
   frontend:
     build:
       context: ../swarm/frontend/

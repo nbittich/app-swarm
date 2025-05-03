@@ -1,7 +1,7 @@
 services:
-  # virtuoso:
-  #   ports:
-  #     - "8890:8890"
+  virtuoso:
+    ports:
+      - "8890:8890"
   nats:
     ports:
       - "4222:4222"
@@ -28,6 +28,7 @@ services:
     env_file:
       - ./config/env-files/dev/mongo_cli.env
   job-manager:
+    image: nbittich/job-manager:latest
     # ports:
     #   - "8080:80"
     env_file:
@@ -38,44 +39,59 @@ services:
       - ./config/env-files/dev/download.env
       - ./config/env-files/dev/job-manager.env
   crawler:
+    image: nbittich/crawler:latest
     env_file:
       - ./config/env-files/dev/nats.env
       - ./config/env-files/dev/crawler.env
       # - ./config/env-files/dev/mongo_cli.env
   extractor:
+    image: nbittich/extractor:latest
     env_file:
       - ./config/env-files/dev/nats.env
       - ./config/env-files/dev/extractor.env
   filter:
+    image: nbittich/filter:latest
     env_file:
       - ./config/env-files/dev/nats.env
       - ./config/env-files/dev/filter.env
   add-uuid:
+    image: nbittich/add-uuid:latest
     env_file:
       - ./config/env-files/dev/nats.env
       - ./config/env-files/dev/mongo_cli.env
       - ./config/env-files/dev/add-uuid.env
   diff:
+    image: nbittich/diff:latest
     env_file:
       - ./config/env-files/dev/nats.env
       - ./config/env-files/dev/mongo_cli.env
       - ./config/env-files/dev/diff.env
   publish:
+    image: nbittich/publish:latest
     env_file:
       - ./config/env-files/dev/nats.env
       - ./config/env-files/dev/sparql_cli.env
       - ./config/env-files/dev/publish.env
   cleanup:
+    image: nbittich/cleanup:latest
     env_file:
       - ./config/env-files/dev/nats.env
       - ./config/env-files/dev/mongo_cli.env
       - ./config/env-files/dev/cleanup.env
   archive:
+    image: nbittich/archive:latest
     env_file:
       - ./config/env-files/dev/nats.env
       - ./config/env-files/dev/mongo_cli.env
       - ./config/env-files/dev/archive.env
+  index:
+    image: nbittich/index:latest
+    env_file:
+      - ./config/env-files/dev/nats.env
+      - ./config/env-files/dev/sparql_cli.env
+      - ./config/env-files/dev/index.env
   frontend:
+    image: nbittich/swarm-frontend:latest
     env_file:
       - ./config/env-files/dev/frontend.env
   proxy:
@@ -94,3 +110,16 @@ services:
       - job-manager
       - frontend
     restart: always
+  meilisearch:
+      env_file:
+          - ./config/env-files/dev/meilisearch.env
+      ports:
+          - "7700:7700"
+  # dev only!
+  meilisearch-dashboard:
+      build:
+          context: ./docker-files/meilisearch-dashboard/.
+      environment:
+          REACT_APP_MEILI_SERVER_ADDRESS: http://localhost:7700
+      ports:
+        - 3000:3000

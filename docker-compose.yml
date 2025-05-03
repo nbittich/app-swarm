@@ -102,11 +102,25 @@ services:
       - ./data/shared:/share
     networks:
       swarm:
+  index:
+    image: nbittich/index:0.1.6
+    restart: always
+    volumes:
+      - ./data/shared:/share
+      - ./config/index:/index_config
+    networks:
+      swarm:
   frontend:
     image: nbittich/swarm-frontend:0.1.6
     restart: always
     networks:
       swarm:
-
+  meilisearch:
+      image: getmeili/meilisearch:v1
+      volumes:
+          - ./data/meilisearch:/meili_data
+      restart: always
+      networks:
+          swarm:
 networks:
   swarm:
