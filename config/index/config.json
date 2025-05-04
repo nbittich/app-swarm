@@ -7,6 +7,13 @@
         "onPath": "sessions",
         "properties": [
             {
+                "name": "derived_from",
+                "paths": [
+                    "http://www.w3.org/ns/prov#wasDerivedFrom"
+                ],
+                "optional": true
+            },
+            {
                 "name": "abstract_location_id",
                 "paths": [
                     "http://data.vlaanderen.be/ns/besluit#isGehoudenDoor",
@@ -195,6 +202,13 @@
         ],
         "onPath": "agenda-items",
         "properties": [
+            {
+                "name": "derived_from",
+                "paths": [
+                    "http://www.w3.org/ns/prov#wasDerivedFrom"
+                ],
+                "optional": true
+            },
             {
                 "name": "abstract_location_id",
                 "paths": [

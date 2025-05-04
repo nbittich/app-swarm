@@ -57,6 +57,7 @@ services:
     volumes:
       - ./data/shared:/share
       - ./config/job-manager/definitions.json:/definitions.json
+      - ./config/index:/index_config
     networks:
       swarm:
   filter:

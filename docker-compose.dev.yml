@@ -37,6 +37,7 @@ services:
       - ./config/env-files/dev/sparql_cli.env
       - ./config/env-files/dev/api.env
       - ./config/env-files/dev/download.env
+      - ./config/env-files/dev/meilisearch-client.env
       - ./config/env-files/dev/job-manager.env
   crawler:
     image: nbittich/crawler:latest
@@ -89,6 +90,7 @@ services:
     env_file:
       - ./config/env-files/dev/nats.env
       - ./config/env-files/dev/sparql_cli.env
+      - ./config/env-files/dev/meilisearch-client.env
       - ./config/env-files/dev/index.env
   frontend:
     image: nbittich/swarm-frontend:latest
