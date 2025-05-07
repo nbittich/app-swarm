@@ -4,3 +4,4 @@
 /config/nats/nats-server-prod.conf
 /config/prod-migrations
 docker-compose.override.yml
+/secrets/
