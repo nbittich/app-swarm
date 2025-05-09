@@ -2,7 +2,7 @@
     {
         "id": "019422ef4fd57db2a30207486a1eba55",
         "name": "Cleanup",
-        "allowConcurrentRun": false,
+        "allowConcurrentRun": true,
         "tasks": [
             {
                 "name": "cleanup",
