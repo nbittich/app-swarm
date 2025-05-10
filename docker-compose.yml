@@ -29,7 +29,7 @@ services:
     volumes:
       - ./data/db:/data/db
   migrations:
-    image: nbittich/mongodb-migration:v0.3.1
+    image: nbittich/mongodb-migration:v0.3.0
     restart: "no"
     volumes:
       - ./config/migrations:/migrations/all
