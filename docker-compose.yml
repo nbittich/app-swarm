@@ -1,5 +1,12 @@
+x-logging: &default-logging
+  driver: "json-file"
+  options:
+    max-size: "10m"
+    max-file: "5"
+
 services:
   virtuoso:
+    logging: *default-logging
     image: redpencil/virtuoso:1.2.1
     environment:
       SPARQL_UPDATE: "true"
@@ -14,6 +21,7 @@ services:
   nats:
     image: nats:2.11-alpine
     restart: always
+    logging: *default-logging
     networks:
       swarm:
     container_name: nats-server
@@ -22,6 +30,7 @@ services:
       - ./data/nats/data:/nats-data
       - ./config/nats/nats-server.conf:/nats-config/nats.conf
   mongo:
+    logging: *default-logging
     image: mongo:7
     networks:
       swarm:
@@ -29,6 +38,7 @@ services:
     volumes:
       - ./data/db:/data/db
   migrations:
+    logging: *default-logging
     image: nbittich/mongodb-migration:v0.3.0
     restart: "no"
     volumes:
@@ -37,6 +47,7 @@ services:
       swarm:
   # app services
   crawler:
+    logging: *default-logging
     image: nbittich/crawler:0.3.2
     restart: always
     volumes:
@@ -45,6 +56,7 @@ services:
     networks:
       swarm:
   extractor:
+    logging: *default-logging
     image: nbittich/extractor:0.3.2
     restart: always
     volumes:
@@ -52,6 +64,7 @@ services:
     networks:
       swarm:
   job-manager:
+    logging: *default-logging
     image: nbittich/job-manager:0.3.2
     restart: always
     volumes:
@@ -61,6 +74,7 @@ services:
     networks:
       swarm:
   filter:
+    logging: *default-logging
     image: nbittich/filter:0.3.2
     restart: always
     volumes:
@@ -69,6 +83,7 @@ services:
     networks:
       swarm:
   add-uuid:
+    logging: *default-logging
     image: nbittich/add-uuid:0.3.2
     restart: always
     volumes:
@@ -76,6 +91,7 @@ services:
     networks:
       swarm:
   diff:
+    logging: *default-logging
     image: nbittich/diff:0.3.2
     restart: always
     volumes:
@@ -83,6 +99,7 @@ services:
     networks:
       swarm:
   publish:
+    logging: *default-logging
     image: nbittich/publish:0.3.2
     restart: always
     volumes:
@@ -90,6 +107,7 @@ services:
     networks:
       swarm:
   cleanup:
+    logging: *default-logging
     image: nbittich/cleanup:0.3.2
     restart: always
     volumes:
@@ -97,6 +115,7 @@ services:
     networks:
       swarm:
   archive:
+    logging: *default-logging
     image: nbittich/archive:0.3.2
     restart: always
     volumes:
@@ -104,6 +123,7 @@ services:
     networks:
       swarm:
   index:
+    logging: *default-logging
     image: nbittich/index:0.3.2
     restart: always
     volumes:
@@ -112,16 +132,18 @@ services:
     networks:
       swarm:
   frontend:
+    logging: *default-logging
     image: nbittich/swarm-frontend:0.3.2
     restart: always
     networks:
       swarm:
   meilisearch:
-      image: getmeili/meilisearch:v1
-      volumes:
-          - ./data/meilisearch:/meili_data
-      restart: always
-      networks:
+    logging: *default-logging
+    image: getmeili/meilisearch:v1
+    volumes:
+        - ./data/meilisearch:/meili_data
+    restart: always
+    networks:
           swarm:
 networks:
   swarm:
