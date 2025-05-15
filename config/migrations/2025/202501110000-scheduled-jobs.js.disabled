@@ -3805,7 +3805,7 @@ const SCHEDULED_JOBS = [
             "order": 0,
             "payload": {
                 "type": "scrapeUrl",
-                "value": "https://www.provincieantwerpen.be/provinciebestuur/politiek-bestuur"
+                "value": "https://www.provincieantwerpen.be/provinciebestuur/politiek-bestuur/deputatie/lijst-van-de-besluiten.html"
             }
         },
         "definitionId": "0193e822c0377b8187a6d151dbbb4216",
