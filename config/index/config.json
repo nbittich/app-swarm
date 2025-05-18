@@ -11,7 +11,11 @@
                 "paths": [
                     "http://www.w3.org/ns/prov#wasDerivedFrom"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": true,
+                    "jsType": "url"
+                }
             },
             {
                 "name": "abstract_location_id",
@@ -21,7 +25,10 @@
                     "http://data.vlaanderen.be/ns/besluit#werkingsgebied",
                     "http://mu.semte.ch/vocabularies/core/uuid"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": false
+                }
             },
             {
                 "name": "location_id",
@@ -32,7 +39,10 @@
                     "http://data.vlaanderen.be/ns/besluit#werkingsgebied",
                     "http://mu.semte.ch/vocabularies/core/uuid"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": false
+                }
             },
             {
                 "name": "abstract_governing_body_location_name",
@@ -43,7 +53,11 @@
                     "http://data.vlaanderen.be/ns/besluit#werkingsgebied",
                     "http://www.w3.org/2000/01/rdf-schema#label"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": true,
+                    "jsType": "string"
+                }
             },
             {
                 "name": "abstract_governing_body_id",
@@ -52,7 +66,10 @@
                     "http://data.vlaanderen.be/ns/mandaat#isTijdspecialisatieVan",
                     "http://mu.semte.ch/vocabularies/core/uuid"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": false
+                }
             },
             {
                 "name": "abstract_governing_body_name",
@@ -61,7 +78,11 @@
                     "http://data.vlaanderen.be/ns/mandaat#isTijdspecialisatieVan",
                     "http://www.w3.org/2004/02/skos/core#prefLabel"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": true,
+                    "jsType": "string"
+                }
             },
             {
                 "name": "abstract_governing_body_classification_name",
@@ -71,7 +92,11 @@
                     "http://www.w3.org/ns/org#classification",
                     "http://www.w3.org/2004/02/skos/core#prefLabel"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": true,
+                    "jsType": "string"
+                }
             },
             {
                 "name": "abstract_governing_body_classification_id",
@@ -81,7 +106,10 @@
                     "http://www.w3.org/ns/org#classification",
                     "http://mu.semte.ch/vocabularies/core/uuid"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": false
+                }
             },
             {
                 "name": "governing_body_id",
@@ -89,7 +117,10 @@
                     "http://data.vlaanderen.be/ns/besluit#isGehoudenDoor",
                     "http://mu.semte.ch/vocabularies/core/uuid"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": false
+                }
             },
             {
                 "name": "governing_body_name",
@@ -97,7 +128,11 @@
                     "http://data.vlaanderen.be/ns/besluit#isGehoudenDoor",
                     "http://www.w3.org/2004/02/skos/core#prefLabel"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": true,
+                    "jsType": "string"
+                }
             },
             {
                 "name": "governing_body_classification_name",
@@ -106,7 +141,11 @@
                     "http://www.w3.org/ns/org#classification",
                     "http://www.w3.org/2004/02/skos/core#prefLabel"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": true,
+                    "jsType": "string"
+                }
             },
             {
                 "name": "governing_body_classification_id",
@@ -115,7 +154,10 @@
                     "http://www.w3.org/ns/org#classification",
                     "http://mu.semte.ch/vocabularies/core/uuid"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": false
+                }
             },
             {
                 "name": "planned_start",
@@ -123,21 +165,33 @@
                     "^http://data.vlaanderen.be/ns/besluit#behandelt",
                     "http://data.vlaanderen.be/ns/besluit#geplandeStart"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": true,
+                    "jsType": "date"
+                }
             },
             {
                 "name": "started_at",
                 "paths": [
                     "http://www.w3.org/ns/prov#startedAtTime"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": true,
+                    "jsType": "date"
+                }
             },
             {
                 "name": "ended_at",
                 "paths": [
                     "http://www.w3.org/ns/prov#endedAtTime"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": true,
+                    "jsType": "date"
+                }
             },
             {
                 "name": "agenda_items_title",
@@ -145,7 +199,11 @@
                     "http://data.vlaanderen.be/ns/besluit#behandelt",
                     "http://purl.org/dc/terms/title"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": true,
+                    "jsType": "string"
+                }
             },
             {
                 "name": "agenda_items_id",
@@ -153,7 +211,10 @@
                     "http://data.vlaanderen.be/ns/besluit#behandelt",
                     "http://mu.semte.ch/vocabularies/core/uuid"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": false
+                }
             },
             {
                 "name": "agenda_items_description",
@@ -161,7 +222,11 @@
                     "http://data.vlaanderen.be/ns/besluit#behandelt",
                     "http://purl.org/dc/terms/description"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": true,
+                    "jsType": "string"
+                }
             },
             {
                 "name": "governing_body_location_name",
@@ -171,7 +236,11 @@
                     "http://data.vlaanderen.be/ns/besluit#werkingsgebied",
                     "http://www.w3.org/2000/01/rdf-schema#label"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": true,
+                    "jsType": "string"
+                }
             },
             {
                 "name": "resolution_title",
@@ -181,7 +250,11 @@
                     "http://www.w3.org/ns/prov#generated",
                     "http://data.europa.eu/eli/ontology#title"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": true,
+                    "jsType": "string"
+                }
             },
             {
                 "name": "resolution_description",
@@ -191,7 +264,11 @@
                     "http://www.w3.org/ns/prov#generated",
                     "http://data.europa.eu/eli/ontology#description"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": true,
+                    "jsType": "string"
+                }
             }
         ]
     },
@@ -207,7 +284,11 @@
                 "paths": [
                     "http://www.w3.org/ns/prov#wasDerivedFrom"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": true,
+                    "jsType": "url"
+                }
             },
             {
                 "name": "abstract_location_id",
@@ -218,7 +299,10 @@
                     "http://data.vlaanderen.be/ns/besluit#werkingsgebied",
                     "http://mu.semte.ch/vocabularies/core/uuid"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": false
+                }
             },
             {
                 "name": "location_id",
@@ -230,7 +314,10 @@
                     "http://data.vlaanderen.be/ns/besluit#werkingsgebied",
                     "http://mu.semte.ch/vocabularies/core/uuid"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": false
+                }
             },
             {
                 "name": "abstract_governing_body_location_name",
@@ -242,7 +329,11 @@
                     "http://data.vlaanderen.be/ns/besluit#werkingsgebied",
                     "http://www.w3.org/2000/01/rdf-schema#label"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": true,
+                    "jsType": "string"
+                }
             },
             {
                 "name": "abstract_governing_body_id",
@@ -252,7 +343,10 @@
                     "http://data.vlaanderen.be/ns/mandaat#isTijdspecialisatieVan",
                     "http://mu.semte.ch/vocabularies/core/uuid"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": false
+                }
             },
             {
                 "name": "abstract_governing_body_name",
@@ -262,7 +356,11 @@
                     "http://data.vlaanderen.be/ns/mandaat#isTijdspecialisatieVan",
                     "http://www.w3.org/2004/02/skos/core#prefLabel"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": true,
+                    "jsType": "string"
+                }
             },
             {
                 "name": "abstract_governing_body_classification_name",
@@ -273,7 +371,11 @@
                     "http://www.w3.org/ns/org#classification",
                     "http://www.w3.org/2004/02/skos/core#prefLabel"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": true,
+                    "jsType": "string"
+                }
             },
             {
                 "name": "abstract_governing_body_classification_id",
@@ -284,7 +386,10 @@
                     "http://www.w3.org/ns/org#classification",
                     "http://mu.semte.ch/vocabularies/core/uuid"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": false
+                }
             },
             {
                 "name": "governing_body_id",
@@ -293,7 +398,10 @@
                     "http://data.vlaanderen.be/ns/besluit#isGehoudenDoor",
                     "http://mu.semte.ch/vocabularies/core/uuid"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": false
+                }
             },
             {
                 "name": "governing_body_name",
@@ -302,7 +410,11 @@
                     "http://data.vlaanderen.be/ns/besluit#isGehoudenDoor",
                     "http://www.w3.org/2004/02/skos/core#prefLabel"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": true,
+                    "jsType": "string"
+                }
             },
             {
                 "name": "governing_body_classification_name",
@@ -312,7 +424,11 @@
                     "http://www.w3.org/ns/org#classification",
                     "http://www.w3.org/2004/02/skos/core#prefLabel"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": true,
+                    "jsType": "string"
+                }
             },
             {
                 "name": "governing_body_classification_id",
@@ -322,7 +438,10 @@
                     "http://www.w3.org/ns/org#classification",
                     "http://mu.semte.ch/vocabularies/core/uuid"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": false
+                }
             },
             {
                 "name": "session_planned_start",
@@ -330,7 +449,11 @@
                     "^http://data.vlaanderen.be/ns/besluit#behandelt",
                     "http://data.vlaanderen.be/ns/besluit#geplandeStart"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": true,
+                    "jsType": "date"
+                }
             },
             {
                 "name": "session_started_at",
@@ -338,7 +461,11 @@
                     "^http://data.vlaanderen.be/ns/besluit#behandelt",
                     "http://www.w3.org/ns/prov#startedAtTime"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": true,
+                    "jsType": "date"
+                }
             },
             {
                 "name": "session_ended_at",
@@ -346,21 +473,33 @@
                     "^http://data.vlaanderen.be/ns/besluit#behandelt",
                     "http://www.w3.org/ns/prov#endedAtTime"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": true,
+                    "jsType": "date"
+                }
             },
             {
                 "name": "title",
                 "paths": [
                     "http://purl.org/dc/terms/title"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": true,
+                    "jsType": "string"
+                }
             },
             {
                 "name": "description",
                 "paths": [
                     "http://purl.org/dc/terms/description"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": true,
+                    "jsType": "string"
+                }
             },
             {
                 "name": "resolution_title",
@@ -369,7 +508,11 @@
                     "http://www.w3.org/ns/prov#generated",
                     "http://data.europa.eu/eli/ontology#title"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": true,
+                    "jsType": "string"
+                }
             },
             {
                 "name": "resolution_description",
@@ -378,7 +521,11 @@
                     "http://www.w3.org/ns/prov#generated",
                     "http://data.europa.eu/eli/ontology#description"
                 ],
-                "optional": true
+                "optional": true,
+                "config": {
+                    "visible": true,
+                    "jsType": "string"
+                }
             }
         ]
     }
