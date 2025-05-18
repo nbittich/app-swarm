@@ -201,7 +201,7 @@
                 ],
                 "optional": true,
                 "config": {
-                    "visible": true,
+                    "visible": false,
                     "jsType": "string"
                 }
             },
@@ -224,7 +224,7 @@
                 ],
                 "optional": true,
                 "config": {
-                    "visible": true,
+                    "visible": false,
                     "jsType": "string"
                 }
             },
