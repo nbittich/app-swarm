@@ -1,0 +1,19 @@
+
+const execute = async (db, _) => {
+    const stCollection = await db.collection('subTasks');
+    await stCollection.createIndex({
+        taskId: 1,
+        "status.type": 1,
+        "result.value.baseUrl": 1
+    });
+}
+
+const rollback = async (_db, _context = {}) => {
+};
+
+module.exports = {
+    targetDatabases: ['public'],
+    description: 'Create index for subtasks',
+    rollback,
+    execute,
+};
