@@ -15,6 +15,21 @@ const SCHEDULED_JOBS = [
         },
         "definitionId": "019422ef4fd57db2a30207486a1eba55",
         "cronExpr": "0 30 3 * * * *"
+    }, 
+    {
+        "_id": "01973b7c2a367d84a6b53d5f55d4327e",
+        "name": "Pajottegem",
+        "creationDate": "2025-06-04T17:08:45.888Z",
+        "taskDefinition": {
+            "name": "collect",
+            "order": 0,
+            "payload": {
+                "type": "scrapeUrl",
+                "value": "https://pajottegem-raadpleegomgeving.csecho.be/zittingen/lijst"
+            }
+        },
+        "definitionId": "0193e822c0377b8187a6d151dbbb4216",
+        "cronExpr": "0 43 18 1/4 * * *"
     },
     {
         "_id": "01942368ea607707be91626b1240848e",
