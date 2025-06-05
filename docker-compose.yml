@@ -48,7 +48,7 @@ services:
   # app services
   crawler:
     logging: *default-logging
-    image: nbittich/crawler:0.7.2
+    image: nbittich/crawler:0.7.3
     restart: always
     volumes:
       - ./data/shared:/share
@@ -57,7 +57,7 @@ services:
       swarm:
   extractor:
     logging: *default-logging
-    image: nbittich/extractor:0.7.2
+    image: nbittich/extractor:0.7.3
     restart: always
     volumes:
       - ./data/shared:/share
@@ -65,7 +65,7 @@ services:
       swarm:
   job-manager:
     logging: *default-logging
-    image: nbittich/job-manager:0.7.2
+    image: nbittich/job-manager:0.7.3
     restart: always
     volumes:
       - ./data/shared:/share
@@ -75,7 +75,7 @@ services:
       swarm:
   filter:
     logging: *default-logging
-    image: nbittich/filter:0.7.2
+    image: nbittich/filter:0.7.3
     restart: always
     volumes:
       - ./data/shared:/share
@@ -84,7 +84,7 @@ services:
       swarm:
   add-uuid:
     logging: *default-logging
-    image: nbittich/add-uuid:0.7.2
+    image: nbittich/add-uuid:0.7.3
     restart: always
     volumes:
       - ./data/shared:/share
@@ -92,7 +92,7 @@ services:
       swarm:
   diff:
     logging: *default-logging
-    image: nbittich/diff:0.7.2
+    image: nbittich/diff:0.7.3
     restart: always
     volumes:
       - ./data/shared:/share
@@ -100,7 +100,7 @@ services:
       swarm:
   publish:
     logging: *default-logging
-    image: nbittich/publish:0.7.2
+    image: nbittich/publish:0.7.3
     restart: always
     volumes:
       - ./data/shared:/share
@@ -108,7 +108,7 @@ services:
       swarm:
   cleanup:
     logging: *default-logging
-    image: nbittich/cleanup:0.7.2
+    image: nbittich/cleanup:0.7.3
     restart: always
     volumes:
       - ./data/shared:/share
@@ -116,7 +116,7 @@ services:
       swarm:
   archive:
     logging: *default-logging
-    image: nbittich/archive:0.7.2
+    image: nbittich/archive:0.7.3
     restart: always
     volumes:
       - ./data/shared:/share
@@ -124,7 +124,7 @@ services:
       swarm:
   index:
     logging: *default-logging
-    image: nbittich/index:0.7.2
+    image: nbittich/index:0.7.3
     restart: always
     volumes:
       - ./data/shared:/share
@@ -133,7 +133,7 @@ services:
       swarm:
   frontend:
     logging: *default-logging
-    image: nbittich/swarm-frontend:0.7.2
+    image: nbittich/swarm-frontend:0.7.3
     restart: always
     networks:
       swarm:
