@@ -1,0 +1,16 @@
+const execute = async (db, _) => {
+    const jbCollection = await db.collection('jobs');
+    await jbCollection.createIndex({
+            creationDate: -1
+    });
+}
+
+const rollback = async (_db, _context = {}) => {
+};
+
+module.exports = {
+    targetDatabases: ['public'],
+    description: 'Create index for job',
+    rollback,
+    execute,
+};
