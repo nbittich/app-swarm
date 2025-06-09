@@ -48,7 +48,7 @@ services:
   # app services
   crawler:
     logging: *default-logging
-    image: nbittich/crawler:0.8.1
+    image: nbittich/crawler:0.8.2
     restart: always
     volumes:
       - ./data/shared:/share
@@ -57,7 +57,7 @@ services:
       swarm:
   extractor:
     logging: *default-logging
-    image: nbittich/extractor:0.8.1
+    image: nbittich/extractor:0.8.2
     restart: always
     volumes:
       - ./data/shared:/share
@@ -65,7 +65,7 @@ services:
       swarm:
   job-manager:
     logging: *default-logging
-    image: nbittich/job-manager:0.8.1
+    image: nbittich/job-manager:0.8.2
     restart: always
     volumes:
       - ./data/shared:/share
@@ -73,9 +73,11 @@ services:
       - ./config/index:/index_config
     networks:
       swarm:
+    depends_on:
+      - meilisearch
   filter:
     logging: *default-logging
-    image: nbittich/filter:0.8.1
+    image: nbittich/filter:0.8.2
     restart: always
     volumes:
       - ./data/shared:/share
@@ -84,7 +86,7 @@ services:
       swarm:
   add-uuid:
     logging: *default-logging
-    image: nbittich/add-uuid:0.8.1
+    image: nbittich/add-uuid:0.8.2
     restart: always
     volumes:
       - ./data/shared:/share
@@ -92,7 +94,7 @@ services:
       swarm:
   diff:
     logging: *default-logging
-    image: nbittich/diff:0.8.1
+    image: nbittich/diff:0.8.2
     restart: always
     volumes:
       - ./data/shared:/share
@@ -100,7 +102,7 @@ services:
       swarm:
   publish:
     logging: *default-logging
-    image: nbittich/publish:0.8.1
+    image: nbittich/publish:0.8.2
     restart: always
     volumes:
       - ./data/shared:/share
@@ -108,7 +110,7 @@ services:
       swarm:
   cleanup:
     logging: *default-logging
-    image: nbittich/cleanup:0.8.1
+    image: nbittich/cleanup:0.8.2
     restart: always
     volumes:
       - ./data/shared:/share
@@ -116,7 +118,7 @@ services:
       swarm:
   archive:
     logging: *default-logging
-    image: nbittich/archive:0.8.1
+    image: nbittich/archive:0.8.2
     restart: always
     volumes:
       - ./data/shared:/share
@@ -124,16 +126,18 @@ services:
       swarm:
   index:
     logging: *default-logging
-    image: nbittich/index:0.8.1
+    image: nbittich/index:0.8.2
     restart: always
     volumes:
       - ./data/shared:/share
       - ./config/index:/index_config
     networks:
       swarm:
+    depends_on:
+      - meilisearch
   frontend:
     logging: *default-logging
-    image: nbittich/swarm-frontend:0.8.1
+    image: nbittich/swarm-frontend:0.8.2
     restart: always
     networks:
       swarm:
